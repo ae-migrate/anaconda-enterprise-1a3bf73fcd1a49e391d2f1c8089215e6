@@ -1,0 +1,24 @@
+name: NLP API
+description: |
+    Natural language toolkit API example.
+    Requires access to the full Anaconda repository and to the internet.
+
+commands:
+  default:
+    unix: python -m nltk.downloader vader_lexicon punkt averaged_perceptron_tagger & python nlp.py
+    supports_http_options: true
+    
+packages:
+  - flask
+  - nltk
+  - gensim
+  - spacy
+  - ipykernel
+  - smart_open>=1.8.1
+  - werkzeug>=1
+
+platforms:
+  - linux-64
+
+# anaconda-project will create a fully custom enviromnent from the
+# above specifications, named "default".
